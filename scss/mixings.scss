@@ -1,0 +1,30 @@
+@mixin clearFix {
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin grid ($pading) {
+  & {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  img{
+      &:nth-child(2) {
+        padding: $pading;
+       }
+      &:nth-child(1) {
+         padding: $pading 0 $pading $pading;
+      }
+      &:nth-child(3) {
+         padding: $pading $pading $pading 0;
+      }
+    }
+  }
+}

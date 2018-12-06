@@ -1,0 +1,161 @@
+//-----------Import-----------------
+@import "mixings";
+@import "variables";
+
+//-----------Global styles-------------
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding:0;
+  font-family: "Calibri", sans-serif;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  outline: none;
+  border-radius: .2rem;
+  font-weight: 700;
+  font-family: "Arial";
+  color: $white;
+  text-decoration: none;
+  max-width: 12rem;
+}
+
+.cf {
+  @include clearFix;
+}
+
+//-----------Header styles-------------
+header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+//-----------Body styles-------------
+.content-body {
+   background-color: $grey;
+   padding-top: 3rem;
+   width: 100%;
+  .rubric {
+    display: block;
+    background-color: $grey;
+    padding: 1rem 2.5%;
+    text-align: center;
+    h3 {
+       margin: 0;
+       font-size: 2.5rem;
+       color: $white;
+    }
+    .headline {
+      color: $white;
+      font-size: 1.5rem;
+    }
+   .rubric-blocks {
+        display: flex;
+        justify-content:center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+  }
+}
+
+.rubric-block {
+       flex:1;
+       display: flex;
+       flex-flow: column nowrap;
+       justify-content: space-between;
+       border-radius: .2rem;
+       background-color: $white;
+       margin: 5px;
+       padding: 1rem 1rem 2rem 2rem;
+       h4 {
+          margin: 0;
+          font-size: 2.5rem;
+          color: $darkgrey;
+       }
+       p {
+          text-align: left;
+          margin: 0 0 2rem 0;
+          color: $darkgrey;
+        }
+        img {
+          width: 400px;
+          height: 400px;
+        }
+        .fishes {
+          margin-bottom: 2.5rem;
+        }
+        .grandma {
+          margin-top: 1rem;
+        }
+       .button {
+           padding: .5rem 2rem;
+           background-color: $blue;
+        }
+}
+
+.rubric-block-grid {
+   background-color: $white;
+   border-radius: .2rem;
+   margin: 5px;
+  .image-container {
+          @include grid(2%);
+          img {
+              width: 300px;
+              height: 300px;
+          }
+    }
+}
+//-----------Footer styles-------------
+footer {
+   height: 5vh;
+   .copyright {
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      font-weight: 400;
+      color: $brown;
+      padding-top: .4rem;
+      margin: 0 3rem;
+      text {
+        padding-top: .1rem;
+      }
+      a {
+        text-decoration: none;
+        color: $grey;
+        margin: 0 .5rem;
+        i {
+          font-size:26px;
+        }
+      }
+      a:hover {
+        color:$darkgrey;
+     }
+   }
+}
