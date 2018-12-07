@@ -15,17 +15,10 @@ html, body {
   font-family: "Calibri", sans-serif;
 }
 
-button:active,
-button:focus {
-    outline: none;
-}
-
-ul {
-  list-style: none;
-}
-
-.container {
-  display: block;
+.layout {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
 .wrapper {
@@ -34,15 +27,8 @@ ul {
   justify-content: center;
 }
 
-.button {
-  border: none;
-  outline: none;
-  border-radius: .2rem;
-  font-weight: 700;
-  font-family: "Arial";
-  color: $white;
-  text-decoration: none;
-  max-width: 12rem;
+.container {
+  //display: block;
 }
 
 .cf {
@@ -51,14 +37,22 @@ ul {
 
 //-----------Header styles-------------
 header{
+    background-color: $grey;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    padding: 1rem 0;
+    h1 {
+      color: $white;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin: 0 auto;
+    }
 }
 
 //-----------Body styles-------------
 .content-body {
-   background-color: $grey;
+   flex: 1;
+   background-color: $white;
    padding-top: 3rem;
    width: 100%;
   .rubric {
@@ -82,41 +76,6 @@ header{
         flex-wrap: wrap;
     }
   }
-}
-
-.rubric-block {
-       flex:1;
-       display: flex;
-       flex-flow: column nowrap;
-       justify-content: space-between;
-       border-radius: .2rem;
-       background-color: $white;
-       margin: 5px;
-       padding: 1rem 1rem 2rem 2rem;
-       h4 {
-          margin: 0;
-          font-size: 2.5rem;
-          color: $darkgrey;
-       }
-       p {
-          text-align: left;
-          margin: 0 0 2rem 0;
-          color: $darkgrey;
-        }
-        img {
-          width: 400px;
-          height: 400px;
-        }
-        .fishes {
-          margin-bottom: 2.5rem;
-        }
-        .grandma {
-          margin-top: 1rem;
-        }
-       .button {
-           padding: .5rem 2rem;
-           background-color: $blue;
-        }
 }
 
 .rubric-block-grid {
